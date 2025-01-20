@@ -181,6 +181,27 @@ export default class Bike {
 		GlobalEnvTexture.name = "GlobalEnvMap";
 		this.envTexture = GlobalEnvTexture;
 
+		// this.scene.background = this.envTexture;
+		this.scene.backgroundIntensity = 0.1;
+
+		// GUI setup
+		const gui = new GUI();
+		const params = {
+			useTexture: false, // Initial state (no texture)
+		};
+
+		// Add toggle for texture
+		gui.add(params, 'useTexture')
+			.name('Toggle Background')
+			.onChange((value) => {
+				if (value) {
+					this.scene.background = this.envTexture; // Set texture as background
+				} else {
+					this.scene.background = null; // Remove background
+				}
+			});
+
+
 		// const HeadLightEnvMapTexture = envMaps[`${basePath}/HeadLightGlass.hdr`];
 		// HeadLightEnvMapTexture.name = "HeadLightEnvMap";
 		// this.HeadLightEnvMap = HeadLightEnvMapTexture;
@@ -310,20 +331,18 @@ export default class Bike {
 				
 				
 				//////////////////////////////////////////////
-				if(child.name === "Big_Tile_Face_Opecity"){ 
-					child.material.roughness = 0.1;
-					child.material.metalness = 1;
-					child.material.envMapIntensity = 0.08;
-					child.material.specularIntensity = 0.2;
-					child.material._clearcoat = 1;
-					child.material.toneMapped = false;
+				if(child.name === "Tile_Face"){ 
+					child.material.roughness = 0.15;
+					child.material.metalness = 0.05;
+					child.material.envMapIntensity = 0.11;
+					child.material.specularIntensity = 0.7;
+					child.material._clearcoat = 0.06;
 				}
-				if(child.name === "Big_Tile_Back"){ 
-					child.material.toneMapped = true;
+				if(child.name === "Tile_Back"){ 
 					child.material.roughness = 1;
 					child.material.metalness = 0;
-					child.material.envMapIntensity = 0.25;
-					child.material.specularIntensity = 0;
+					child.material.envMapIntensity = 0.2;
+					child.material.specularIntensity = 0.8;
 				}
 
 				child.material.needsUpdate = true;
