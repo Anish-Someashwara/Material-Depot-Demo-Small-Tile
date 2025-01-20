@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+		
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"/>
+		
+		
+
+		<title>Bike POC</title>
+		<!-- <link rel="stylesheet" href="./src/style.css" />
+		<link rel="stylesheet" href="./src/CSSUtilityClass.css" /> -->
+		
+	</head>
+	<body>
+		<p id="debug-info" style="position: absolute; color: white; z-index: 2700;margin-left: 1%;"></p>
+		<!-- <img src="../static/refs/DropDown.png" alt="ref Img" style="width: 100%; height: 100%; opacity: 0.4; pointer-events: none; position: absolute; z-index: 2700;"> -->
+		<div id="mainDiv" style="opacity: 0">
+			<!-- <div id="categories-section"></div>
+			<div id="items-section"></div> -->
+			<div id="bikeView">
+				<div id="bike-section">
+					<!-- <div id="bike-heading-row">
+						<div id="bike-name-div">
+							<img
+								id="bike-logo"
+								src="../static/images/Common/RoyalEnfieldLogo.svg"
+								alt="Royal Enfield Logo"
+							/>
+							<div id="bike-name">Classic 350 Dual Channel</div>
+						</div>
+						<div id="prices-div" style="display: none">
+							<div id="bike-price-div">
+								<div id="bike-price">&#x20B9;2,59,546</div>
+								<div id="emi-div">
+									<div id="emi">EMI</div>
+									<img
+										id="edit-emi"
+										src="../static/images/Common/editIcon.png"
+										alt="edit Image"
+									/>
+								</div>
+							</div>
+						</div>
+					</div> -->
+
+
+					<!-- <div id="loadingOverlay" style="display: none;"> -->
+					<div id="loadingOverlay">
+						<div id="canvasLoaderContainer">
+							<div id="canvasLoader">
+								<img
+									id="loader-gif"
+									src="../static/images/Common/Loader.gif"
+									alt="Royal Enfield Loader"
+								/>
+							</div>
+						</div>
+					
+						<div id="loadingBarContainer">
+							<div id="loadingBar"></div>
+						</div>
+					</div>
+					
+					<canvas id="webgl"></canvas>
+				</div>
+			</div>
+		</div>
+		<div id="loaderDiv">
+			<img
+				id="loader-logo"
+				src="../static/images/Common/RoyalEnfieldLogo.svg"
+				alt="Royal Enfield Logo"
+				style="margin-left: auto; margin-right: auto"
+			/>
+			<div id="loader">
+				<img
+					id="loader-gif"
+					src="../static/images/Common/Loader.gif"
+					alt="Royal Enfield Loader"
+				/>
+			</div>
+		</div>
+
+
+		<div id="rotateScreenDiv">
+			<div id="rotate-screen-icon">
+				<img
+					class="animate-opacity"
+					id="rotate-screen-img"
+					src="../static/images/Common/PhoneRotationIcon.png"
+					alt="Rotate Screen"
+				/>
+			</div>
+			<div id="rotate-screen-info">
+				<span class="animate-opacity" id="rotate-heading-1"
+					>ROTATE</span
+				>
+				<span class="animate-opacity" id="rotate-heading-2"
+					>YOUR PHONE</span
+				>
+				<span class="animate-opacity" id="rotate-heading-3"
+					>FOR THE BEST EXPERIENCE</span
+				>
+			</div>
+		</div>
+
+
+		<!-- <script>
+			// Function to simulate loading
+			function simulateLoading() {
+				let loadingBar = document.getElementById('loadingBar');
+				let width = 0;
+				let interval = setInterval(frame, 50);
+	
+				function frame() {
+					if (width >= 100) {
+						clearInterval(interval);
+						// document.getElementById('loadingOverlay').style.display = 'none';
+					} else {
+						width++;
+						loadingBar.style.width = width + '%';
+					}
+				}
+			}
+	
+			// Start the loading simulation
+			simulateLoading();
+		</script> -->
+
+
+		<!-- <script type="importmap" async>
+			{
+				"imports": {
+					"three": "https://unpkg.com/three@0.158.0/build/three.module.js",
+					"three/addons/": "https://unpkg.com/three@0.158.0/examples/jsm/",
+					"three/srcLoaders/": "https://unpkg.com/three@0.158.0/src/",
+					"camera-controls": "https://cdn.jsdelivr.net/npm/camera-controls@2.8.3/+esm",
+					"lil-gui": "https://cdn.jsdelivr.net/npm/lil-gui@0.19.2/dist/lil-gui.umd.min.js"
+				}
+			}
+		</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" async></script>
+		
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"
+			integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+			async
+		></script>
+
+		 -->
+		
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5/dat.gui.min.js" async></script>
+		
+	</body>
+</html>
