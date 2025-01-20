@@ -177,7 +177,7 @@ export default class Bike {
 		// TyreEnvTexture.name = "TyreEnvMap";
 		// this.tyreRimsEnvMap = TyreEnvTexture;
 
-		const GlobalEnvTexture = envMaps[`${basePath}/NewGlobalEnvMap.hdr`];
+		const GlobalEnvTexture = envMaps[`${basePath}/NewGlobalEnvMap2.hdr`];
 		GlobalEnvTexture.name = "GlobalEnvMap";
 		this.envTexture = GlobalEnvTexture;
 

@@ -130,7 +130,7 @@ export default class ResourceManager {
         const basePath = `static/EnvrionmentMaps`;
         const envMapPaths = [
             `${basePath}/EnvMapTyreRim.hdr`,
-            `${basePath}/NewGlobalEnvMap.hdr`,
+            `${basePath}/NewGlobalEnvMap2.hdr`,
             `${basePath}/HeadLightGlass.hdr`,
         ];
     
