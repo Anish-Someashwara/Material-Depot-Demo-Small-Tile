@@ -28,7 +28,7 @@
 
 // ******** For Webpack Dev Server only *********
 import './style.css';
-import './CSSUtilityClass.css'
+// import './CSSUtilityClass.css'
 
 // ******** For Build (comment the css imports) *********
 // import './style.css';

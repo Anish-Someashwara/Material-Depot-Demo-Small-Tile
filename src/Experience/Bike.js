@@ -241,8 +241,8 @@ export default class Bike {
 		this.setupDummyLoader(this.resourceManager.canvasResources['dummyLoader1'])
 
 		// Deactive loader-logo animation
-		document.getElementById('loader-gif').style.display = 'none'
-		document.getElementById('loadingOverlay').style.backgroundColor = 'transparent'
+		// document.getElementById('loader-gif').style.display = 'none'
+		// document.getElementById('loadingOverlay').style.backgroundColor = 'transparent'
 				
 	}
 
@@ -366,8 +366,8 @@ export default class Bike {
 		// this.experience.renderer.instance.setClearColor(0xfcfbf7);
 
 		// Deactive loader-logo animation
-		document.getElementById('loader-gif').style.display = 'none'
-		document.getElementById('loadingOverlay').style.backgroundColor = 'transparent'
+		// document.getElementById('loader-gif').style.display = 'none'
+		// document.getElementById('loadingOverlay').style.backgroundColor = 'transparent'
 
 		
 		// this.activateBikeView();
@@ -501,7 +501,11 @@ export default class Bike {
 
 		
 		this.scene.add(this.bike);
-		this.loaders.deactivateLoader();
+		// this.loaders.deactivateLoader();
+
+		setTimeout(() => {
+			document.getElementById('loading-overlay').style.display = 'none';
+		}, 2000);
 
 		// Seat Viewing Angle
 		this.seatViewPoint = new THREE.Mesh(

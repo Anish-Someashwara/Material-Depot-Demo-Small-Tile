@@ -2,12 +2,9 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
-		
 		<meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"/>
-		
 		<title>Materail Depot - Small Tile</title>
 		<!-- <link rel="stylesheet" href="./src/style.css" />
 		<link rel="stylesheet" href="./src/CSSUtilityClass.css" /> -->
@@ -21,113 +18,32 @@
 			<div id="items-section"></div> -->
 			<div id="bikeView">
 				<div id="bike-section">
-					<!-- <div id="bike-heading-row">
-						<div id="bike-name-div">
-							<img
-								id="bike-logo"
-								src="../static/images/Common/RoyalEnfieldLogo.svg"
-								alt="Royal Enfield Logo"
-							/>
-							<div id="bike-name">Classic 350 Dual Channel</div>
-						</div>
-						<div id="prices-div" style="display: none">
-							<div id="bike-price-div">
-								<div id="bike-price">&#x20B9;2,59,546</div>
-								<div id="emi-div">
-									<div id="emi">EMI</div>
-									<img
-										id="edit-emi"
-										src="../static/images/Common/editIcon.png"
-										alt="edit Image"
-									/>
-								</div>
-							</div>
-						</div>
-					</div> -->
-
-
-					<!-- <div id="loadingOverlay" style="display: none;"> -->
-					<div id="loadingOverlay">
-						<div id="canvasLoaderContainer">
-							<div id="canvasLoader">
-								<img
-									id="loader-gif"
-									src="../static/images/Common/Loader.gif"
-									alt="Royal Enfield Loader"
-								/>
-							</div>
-						</div>
-					
-						<div id="loadingBarContainer">
-							<div id="loadingBar"></div>
-						</div>
-					</div>
 					
 					<canvas id="webgl"></canvas>
 				</div>
 			</div>
 		</div>
+
+		<body>
+			<p id="debug-info" style="position: absolute; color: white; z-index: 2700; margin-left: 1%;"></p>
+			<div id="mainDiv" style="opacity: 0">
+				<div id="bikeView">
+					<div id="bike-section">
+						<canvas id="webgl"></canvas>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Loading Overlay -->
+			<div id="loading-overlay" style="display: flex;">
+				<div class="loader"></div>
+			</div>
+		</body>
+
+		
 		<div id="loaderDiv">
-			<img
-				id="loader-logo"
-				src="../static/images/Common/RoyalEnfieldLogo.svg"
-				alt="Royal Enfield Logo"
-				style="margin-left: auto; margin-right: auto"
-			/>
-			<div id="loader">
-				<img
-					id="loader-gif"
-					src="../static/images/Common/Loader.gif"
-					alt="Royal Enfield Loader"
-				/>
-			</div>
+			
 		</div>
-
-
-		<div id="rotateScreenDiv">
-			<div id="rotate-screen-icon">
-				<img
-					class="animate-opacity"
-					id="rotate-screen-img"
-					src="../static/images/Common/PhoneRotationIcon.png"
-					alt="Rotate Screen"
-				/>
-			</div>
-			<div id="rotate-screen-info">
-				<span class="animate-opacity" id="rotate-heading-1"
-					>ROTATE</span
-				>
-				<span class="animate-opacity" id="rotate-heading-2"
-					>YOUR PHONE</span
-				>
-				<span class="animate-opacity" id="rotate-heading-3"
-					>FOR THE BEST EXPERIENCE</span
-				>
-			</div>
-		</div>
-
-
-		<!-- <script>
-			// Function to simulate loading
-			function simulateLoading() {
-				let loadingBar = document.getElementById('loadingBar');
-				let width = 0;
-				let interval = setInterval(frame, 50);
-	
-				function frame() {
-					if (width >= 100) {
-						clearInterval(interval);
-						// document.getElementById('loadingOverlay').style.display = 'none';
-					} else {
-						width++;
-						loadingBar.style.width = width + '%';
-					}
-				}
-			}
-	
-			// Start the loading simulation
-			simulateLoading();
-		</script> -->
 
 
 		<!-- <script type="importmap" async>
@@ -153,7 +69,7 @@
 
 		 -->
 		
-		 <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5/dat.gui.min.js" async></script>
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5/dat.gui.min.js" ></script>
 		
 	</body>
 </html>
