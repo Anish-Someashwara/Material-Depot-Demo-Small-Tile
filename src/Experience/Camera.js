@@ -33,7 +33,8 @@ export default class Camera {
 			10000,
 		);
 		this.scene.add(this.instance);
-		this.instance.position.set(-200, 95, -500);
+		// this.instance.position.set(-280, 282, -390);
+		this.instance.position.set(358.89943011863386, 253.0309704373563, -330.2285840212415);
 
 		// this.instance.position.set(0, 500, -500);
 		// this.instance.up.set(0,0,1)
@@ -54,7 +55,7 @@ export default class Camera {
 		this.cameraControls.maxDistance = 1000;
 
 
-		this.cameraControls.setTarget(0, 50, 0, true);
+		this.cameraControls.setTarget(0, 5, 0, true);
 		// this.cameraControls.setOrbitPoint(0,100,0)
 		
 		// ************* For Desktop Devices *************
@@ -131,6 +132,7 @@ export default class Camera {
 	}
 
 	update(delta) {
+		// console.log('this.instance.position :>> ', this.instance.position);
 		// Limiting The Panning
 		if (this.cameraControls) {
 			const camContOffset = this.cameraControls.getFocalOffset();
