@@ -181,13 +181,13 @@ export default class Bike {
 		GlobalEnvTexture.name = "GlobalEnvMap";
 		this.envTexture = GlobalEnvTexture;
 
-		// this.scene.background = this.envTexture;
+		this.scene.background = this.envTexture;
 		this.scene.backgroundIntensity = 0.1;
 
 		// GUI setup
 		const gui = new GUI();
 		const params = {
-			useTexture: false, // Initial state (no texture)
+			useTexture: true, // Initial state (no texture)
 		};
 
 		// Add toggle for texture
@@ -333,16 +333,16 @@ export default class Bike {
 				//////////////////////////////////////////////
 				if(child.name === "Tile_Face"){ 
 					child.material.roughness = 0.15;
-					child.material.metalness = 0.05;
-					child.material.envMapIntensity = 0.11;
-					child.material.specularIntensity = 0.7;
-					child.material._clearcoat = 0.06;
+					child.material.metalness = 0.02;
+					child.material.envMapIntensity = 0.08;
+					child.material.specularIntensity = 0.1;
+					child.material._clearcoat = 0.05;
 				}
 				if(child.name === "Tile_Back"){ 
 					child.material.roughness = 1;
 					child.material.metalness = 0;
 					child.material.envMapIntensity = 0.2;
-					child.material.specularIntensity = 0.8;
+					child.material.specularIntensity = 0.2;
 				}
 
 				child.material.needsUpdate = true;
@@ -505,6 +505,7 @@ export default class Bike {
 
 		setTimeout(() => {
 			document.getElementById('loading-overlay').style.display = 'none';
+			// document.getElementById('loader-bar').style.display = 'none';
 		}, 2000);
 
 		// Seat Viewing Angle

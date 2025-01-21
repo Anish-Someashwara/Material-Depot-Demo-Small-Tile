@@ -160,7 +160,7 @@ export default class ResourceManager {
             console.log("******** Started BikeModel Loading ********");
             
             // const gltf = await this.loaders.loadDeEncChunks(18, 0, "/static/models/BikeModel_12-7-24-SplitTextures/BikeModel_12-7-24_Center_v1", true);
-            const gltf = await this.loaders.loadGltfByUrl('/static/models/SmallTile_20-01-2025_v1.gltf');
+            const gltf = await this.loaders.loadGltfByUrl('/static/models/SmallTile_21-01-2025_v5.gltf');
             
             
             
